@@ -1,3 +1,4 @@
 Django
 django-widget-tweaks
 django-sass-processor
+libsass
