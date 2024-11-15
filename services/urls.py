@@ -30,6 +30,14 @@ urlpatterns = [
 
     #---------------------Project 
 
+    path('work-res-new', views.work_res_new, name="projects"),
+    path('work-res-appeal', views.work_res_appeal, name="projectcreate"),
+    path('work-res-renewal', views.work_res_renewal, name="projectcreate"), 
+    path('work-res-replacement', views.work_res_replacement, name="projectcreate"), 
+    path('work-res-cancellation', views.work_res_cancellation, name="projectcreate"), 
+    path('work-res-variation', views.work_res_variation, name="projectcreate"), 
+
+
     path('projects', views.projects, name="projects"),
     path('projectcreate', views.projectcreate, name="projectcreate"), 
 
