@@ -45,6 +45,25 @@ urlpatterns = [
     path('work-cancellation', views.work_cancellation, name="projectcreate"), 
     path('work-variation', views.work_variation, name="projectcreate"), 
 
+    # ----res only
+    path('res-new', views.res_new, name="projects"),
+    path('res-appeal', views.res_appeal, name="projectcreate"),
+    path('res-renewal', views.res_renewal, name="projectcreate"), 
+    path('res-replacement', views.res_replacement, name="projectcreate"), 
+    path('res-cancellation', views.res_cancellation, name="projectcreate"), 
+
+    # ----certificate of exemption
+    path('exemption-new', views.exemption_new, name="projects"),
+    path('exemption-appeal', views.exemption_appeal, name="projectcreate"),
+    path('exemption-renewal', views.exemption_renewal, name="projectcreate"), 
+    path('exemption-replacement', views.exemption_replacement, name="projectcreate"), 
+    path('exemption-cancellation', views.exemption_cancellation, name="projectcreate"), 
+    path('exemption-variation', views.exemption_variation, name="projectcreate"), 
+
+    # ----emergency permit
+    path('emergency-new', views.emergency_new, name="projects"),
+    path('emergency-replacement', views.emergency_replacement, name="projectcreate"), 
+
 
     path('projects', views.projects, name="projects"),
     path('projectcreate', views.projectcreate, name="projectcreate"), 

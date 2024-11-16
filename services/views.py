@@ -144,6 +144,92 @@ def work_variation(request):
     context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
     return render(request,"applications/projects/projects-list/work-variation-project.html",context)
 
+# --------------------RES 
+# -----New
+@login_required(login_url="/login_home")
+def res_new(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/res-new-project.html",context)
+
+# -----Appeal
+@login_required(login_url="/login_home")
+def res_appeal(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/res-appeal-project.html",context)
+
+# -----Renewal
+@login_required(login_url="/login_home")
+def res_renewal(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/res-renewal-project.html",context)
+
+# -----Replacement
+@login_required(login_url="/login_home")
+def res_replacement(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/res-replacement-project.html",context)
+
+# ----Cancellation
+@login_required(login_url="/login_home")
+def res_cancellation(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/res-cancellation-project.html",context)
+
+# --------------------CERTIFICATE OF emergency
+# -----New
+@login_required(login_url="/login_home")
+def exemption_new(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/exemption-new-project.html",context)
+
+# -----Appeal
+@login_required(login_url="/login_home")
+def exemption_appeal(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/exemption-appeal-project.html",context)
+
+# -----Renewal
+@login_required(login_url="/login_home")
+def exemption_renewal(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/exemption-renewal-project.html",context)
+
+# -----Replacement
+@login_required(login_url="/login_home")
+def exemption_replacement(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/exemption-replacement-project.html",context)
+
+# ----Cancellation
+@login_required(login_url="/login_home")
+def exemption_cancellation(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/exemption-cancellation-project.html",context)
+
+# ----Variation
+@login_required(login_url="/login_home")
+def exemption_variation(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/exemption-variation-project.html",context)
+
+# --------------------EMERGENCY PERMIT
+# -----New
+@login_required(login_url="/login_home")
+def emergency_new(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/emergency-new-project.html",context)
+
+# -----Replacement
+@login_required(login_url="/login_home")
+def emergency_replacement(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/emergency-replacement-project.html",context)
+
+
+
+
+
+
 
 @login_required(login_url="/login_home")
 def projects(request):
