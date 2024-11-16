@@ -107,6 +107,42 @@ def work_res_variation(request):
     context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
     return render(request,"applications/projects/projects-list/work-res-variation-project.html",context)
 
+# --------------------WORK 
+# -----New
+@login_required(login_url="/login_home")
+def work_new(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/work-new-project.html",context)
+
+# -----Appeal
+@login_required(login_url="/login_home")
+def work_appeal(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/work-appeal-project.html",context)
+
+# -----Renewal
+@login_required(login_url="/login_home")
+def work_renewal(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/work-renewal-project.html",context)
+
+# -----Replacement
+@login_required(login_url="/login_home")
+def work_replacement(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/work-replacement-project.html",context)
+
+# ----Cancellation
+@login_required(login_url="/login_home")
+def work_cancellation(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/work-cancellation-project.html",context)
+
+# ----Variation
+@login_required(login_url="/login_home")
+def work_variation(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/work-variation-project.html",context)
 
 
 @login_required(login_url="/login_home")
