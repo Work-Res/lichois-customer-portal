@@ -225,8 +225,49 @@ def emergency_replacement(request):
     context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
     return render(request,"applications/projects/projects-list/emergency-replacement-project.html",context)
 
+# --------------------BLUE CARD
+# -----New
+@login_required(login_url="/login_home")
+def blue_card_new(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/blue-card-new-project.html",context)
 
+# -----Replacement
+@login_required(login_url="/login_home")
+def blue_card_replacement(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/blue-card-replacement-project.html",context)
 
+# -----Return
+@login_required(login_url="/login_home")
+def blue_card_return(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/blue-card-return-project.html",context)
+
+# --------------------PR
+# -----New
+@login_required(login_url="/login_home")
+def pr_new(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/pr-new-project.html",context)
+
+# -----Replacement
+@login_required(login_url="/login_home")
+def pr_replacement(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/pr-replacement-project.html",context)
+
+# -----Return
+@login_required(login_url="/login_home")
+def pr_return(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/pr-return-project.html",context)
+
+# --------------------VISA 
+@login_required(login_url="/login_home")
+def visa(request):
+    context = { "breadcrumb":{"parent":"Project", "child":"Project List"}}
+    return render(request,"applications/projects/projects-list/visa-project.html",context)
 
 
 

@@ -64,6 +64,18 @@ urlpatterns = [
     path('emergency-new', views.emergency_new, name="projects"),
     path('emergency-replacement', views.emergency_replacement, name="projectcreate"), 
 
+    # ----blue card
+    path('blue-card-new', views.blue_card_new, name="projects"),
+    path('blue-card-replacement', views.blue_card_replacement, name="projectcreate"), 
+    path('blue-card-return', views.blue_card_return, name="projectcreate"), 
+
+    # ----pr
+    path('pr-new', views.pr_new, name="projects"),
+    path('pr-replacement', views.pr_replacement, name="projectcreate"), 
+    path('pr-return', views.pr_return, name="projectcreate"), 
+
+    # ----visa
+    path('visa', views.visa, name="projects"),
 
     path('projects', views.projects, name="projects"),
     path('projectcreate', views.projectcreate, name="projectcreate"), 

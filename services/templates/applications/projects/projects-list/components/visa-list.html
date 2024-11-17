@@ -1,0 +1,207 @@
+{% load static %}
+{% load sass_tags %}
+<style>
+  /* CSS for Active Button */
+  .btn-outline-primary.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+</style>
+
+<div id="visaContainer">
+
+   <!-- Visa Details Section -->
+   <div class="col-md-12">
+    <div class="card">
+      <div class="card-body" id="visaDetails">
+        <h5 class="card-title">Select a visa type to view requirements</h5>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row">
+    <!-- Visa Types -->
+    <div class="col-md-12 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Visa Types</h5>
+          <div class="d-flex flex-wrap justify-content-center gap-3" id="visaList">
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('emergency')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Emergency Visa Icon" class="me-2" style="width: 24px;">
+              Emergency Visa
+            </button> 
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('transit')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Transit Visa Icon" class="me-2" style="width: 24px;">
+              Transit Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('visitor')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Visitor Visa Icon" class="me-2" style="width: 24px;">
+              Visitor Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('investment')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Investment Visa Icon" class="me-2" style="width: 24px;">
+              Investment Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('employment')">
+              <img src="{% static 'assets/images/africort/employment.png' %}" alt="Employment Visa Icon" class="me-2" style="width: 24px;">
+              Employment Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('tourist')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Tourist Visa Icon" class="me-2" style="width: 24px;">
+              Tourist Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('diplomatic')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Diplomatic Visa Icon" class="me-2" style="width: 24px;">
+              Diplomatic Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('official')">
+              <img src="{% static 'assets/images/africort/official-visa.png' %}" alt="Official Visa Icon" class="me-2" style="width: 24px;">
+              Official Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('business')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Business Visa Icon" class="me-2" style="width: 24px;">
+              Business Visa
+            </button>
+            <button 
+              class="btn btn-outline-primary d-flex align-items-center" 
+              onclick="showRequirements('study')">
+              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Student Visa Icon" class="me-2" style="width: 24px;">
+              Study Visa
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+</div>
+
+<script>
+  const visaRequirements = {
+    emergency: {
+      title: "Emergency Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    transit: {
+      title: "Transit Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    visitor: {
+      title: "Visitor Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    investment: {
+      title: "Investment Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    employment: {
+      title: "Employment Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    tourist: {
+      title: "Tourist Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    diplomatic: {
+      title: "Diplomatic Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    business: {
+      title: "Business Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Letter from employer or invitation letter",
+        "Proof of financial support",
+      ],
+    },
+    official: {
+      title: "Official Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+      ],
+    },
+    study: {
+      title: "Study Visa Requirements",
+      requirements: [
+        "Certified passport copy",
+        "Two passport-sized photos",
+        "Admission letter from educational institution",
+        "Proof of financial support",
+      ],
+    },
+  };
+
+  function showRequirements(type) {
+    document.querySelectorAll("#visaList button").forEach(btn => btn.classList.remove("active"));
+
+    const activeButton = document.querySelector(`[onclick="showRequirements('${type}')"]`);
+    activeButton.classList.add("active");
+
+    const details = visaRequirements[type];
+    const visaDetails = document.getElementById("visaDetails");
+    visaDetails.innerHTML = `
+      <h5 class="card-title">${details.title}</h5>
+      <ul>
+        ${details.requirements.map(req => `<li>${req}</li>`).join("")}
+      </ul>
+      <button class="btn btn-primary mt-3">Apply</button>
+    `;
+  }
+</script>
