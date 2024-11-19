@@ -3,15 +3,7 @@
 
 <div id="visaContainer">
 
-   <!-- Visa Details Section -->
-   <div class="col-md-12">
-    <div class="card">
-      <div class="card-body" id="visaDetails">
-        <h5 class="card-title">Select a visa type to view requirements</h5>
-      </div>
-    </div>
-  </div>
-</div>
+   
   <div class="row">
     <!-- Visa Types -->
     <div class="col-md-12 mb-3">
@@ -28,19 +20,19 @@
             <button 
               class="btn btn-outline-primary d-flex align-items-center" 
               onclick="showRequirements('transit')">
-              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Transit Visa Icon" class="me-2" style="width: 24px;">
+              <img src="{% static 'assets/images/africort/transit.png' %}" alt="Transit Visa Icon" class="me-2" style="width: 24px;">
               Transit Visa
             </button>
             <button 
               class="btn btn-outline-primary d-flex align-items-center" 
               onclick="showRequirements('visitor')">
-              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Visitor Visa Icon" class="me-2" style="width: 24px;">
+              <img src="{% static 'assets/images/africort/visitor.png' %}" alt="Visitor Visa Icon" class="me-2" style="width: 24px;">
               Visitor Visa
             </button>
             <button 
               class="btn btn-outline-primary d-flex align-items-center" 
               onclick="showRequirements('investment')">
-              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Investment Visa Icon" class="me-2" style="width: 24px;">
+              <img src="{% static 'assets/images/africort/investment.png' %}" alt="Investment Visa Icon" class="me-2" style="width: 24px;">
               Investment Visa
             </button>
             <button 
@@ -52,13 +44,13 @@
             <button 
               class="btn btn-outline-primary d-flex align-items-center" 
               onclick="showRequirements('tourist')">
-              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Tourist Visa Icon" class="me-2" style="width: 24px;">
+              <img src="{% static 'assets/images/africort/tourism.png' %}" alt="Tourist Visa Icon" class="me-2" style="width: 24px;">
               Tourist Visa
             </button>
             <button 
               class="btn btn-outline-primary d-flex align-items-center" 
               onclick="showRequirements('diplomatic')">
-              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Diplomatic Visa Icon" class="me-2" style="width: 24px;">
+              <img src="{% static 'assets/images/africort/diplomatic.png' %}" alt="Diplomatic Visa Icon" class="me-2" style="width: 24px;">
               Diplomatic Visa
             </button>
             <button 
@@ -70,13 +62,13 @@
             <button 
               class="btn btn-outline-primary d-flex align-items-center" 
               onclick="showRequirements('business')">
-              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Business Visa Icon" class="me-2" style="width: 24px;">
+              <img src="{% static 'assets/images/africort/business.png' %}" alt="Business Visa Icon" class="me-2" style="width: 24px;">
               Business Visa
             </button>
             <button 
               class="btn btn-outline-primary d-flex align-items-center" 
               onclick="showRequirements('study')">
-              <img src="{% static 'assets/images/africort/emergency-visa.png' %}" alt="Student Visa Icon" class="me-2" style="width: 24px;">
+              <img src="{% static 'assets/images/africort/study.png' %}" alt="Student Visa Icon" class="me-2" style="width: 24px;">
               Study Visa
             </button>
           </div>
@@ -93,62 +85,87 @@
       requirements: [
         "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit"
       ],
     },
     transit: {
       title: "Transit Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit"
       ],
     },
     visitor: {
       title: "Visitor Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit",
+        "Marriage certificate",
+        "Dependant birth certificate",
+        "Return visa or residence permit from country of residence",
+        "Certified copies of ordination certificates from religious leaders"
       ],
     },
     investment: {
       title: "Investment Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit"
       ],
     },
     employment: {
       title: "Employment Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit"
       ],
     },
     tourist: {
       title: "Tourist Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit"
       ],
     },
     diplomatic: {
       title: "Diplomatic Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit"
       ],
     },
     business: {
@@ -158,24 +175,35 @@
         "Two passport-sized photos",
         "Letter from employer or invitation letter",
         "Proof of financial support",
+        "Meeting schedule",
+        "Share certificate of host if operating a business",
+        "Certificate of Incorporation of host if operating a business",
+        "Trading license of host if operating a business",
+        "Business profile/letter of invitation from host organisation (with official stamp)"
       ],
     },
     official: {
       title: "Official Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
         "Proof of travel itinerary",
         "Proof of accommodation",
+        "Affidavit"
       ],
     },
     study: {
       title: "Study Visa Requirements",
       requirements: [
-        "Certified passport copy",
+      "Certified passport copy",
         "Two passport-sized photos",
-        "Admission letter from educational institution",
-        "Proof of financial support",
+        "Cover letter from host",
+        "If previously applied for visa please attach the copy of the outcome",
+        "Proof of travel itinerary",
+        "Proof of accommodation",
+        "Affidavit"
       ],
     },
   };
@@ -193,7 +221,6 @@
       <ul>
         ${details.requirements.map(req => `<li>${req}</li>`).join("")}
       </ul>
-      <button class="btn btn-primary mt-3">Apply</button>
     `;
   }
 </script>
