@@ -2,3 +2,5 @@ Django
 django-widget-tweaks
 django-sass-processor
 libsass
+django-two-factor-auth
+phonenumbers

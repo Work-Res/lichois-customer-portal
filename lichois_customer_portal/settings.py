@@ -39,8 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sass_processor',
     'services',
-    'widget_tweaks'
-    
+    'widget_tweaks',
+
+    # 2factor authentication
+    'django_otp',
+    'django_otp.plugins.otp_static',
+    'django_otp.plugins.otp_totp',
+    'django_otp.plugins.otp_email',  # <- if you want email capability.
+    'two_factor',
+    'two_factor.plugins.email',
 ]
 
 MIDDLEWARE = [
@@ -49,8 +56,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django_otp.middleware.OTPMiddleware',
 ]
 
 ROOT_URLCONF = 'lichois_customer_portal.urls'
@@ -135,3 +145,19 @@ SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'two_factor:login'
+
+# this one is optional
+LOGIN_REDIRECT_URL = 'two_factor:profile'
+
+LOGOUT_REDIRECT_URL = 'two_factor:login'
+
+OTP_EMAIL_SENDER = 'admin@africortinvestments.com'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = "pixel5softwares@gmail.com"
+EMAIL_HOST_PASSWORD = "cjdjaumrhwoxxtae"

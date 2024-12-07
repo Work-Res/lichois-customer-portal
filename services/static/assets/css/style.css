@@ -31636,7 +31636,6 @@ ul.dot-group li {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0 auto;
-  background: url("../images/login/login_bg.jpg");
   background-position: center;
   padding: 30px 12px;
 }
